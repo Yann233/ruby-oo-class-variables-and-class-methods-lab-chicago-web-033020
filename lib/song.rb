@@ -48,6 +48,9 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
     genre_hash
   end
 
+# Song class to reveal to us the number of songs each artist is responsible for.
+# A class method that returns a hash of artists and the number of songs that have those artists
+# should return this : {"Beyonce" => 17, "Jay-Z" => 40}
   def self.artist_count
     artist_histo = {}
     @@artists.each do |art|
