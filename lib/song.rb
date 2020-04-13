@@ -52,15 +52,15 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
 # A class method that returns a hash of artists and the number of songs that have those artists
 # should return this : {"Beyonce" => 17, "Jay-Z" => 40}
   def self.artist_count
-    artist_histo = {}
+    artist_hash = {}
     @@artists.each do |art|
-      if artist_histo[art]
-        artist_histo[art] += 1
+      if artist_hash[art]
+        artist_hash[art] += 1
       else
-        artist_histo[art] = 1
+        artist_hash[art] = 1
       end
     end
-    artist_histo
+    artist_hash
   end
 
 end
