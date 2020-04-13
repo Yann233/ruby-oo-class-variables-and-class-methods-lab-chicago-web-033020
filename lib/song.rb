@@ -19,6 +19,10 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
     @@count
   end
 
+    def self.artists
+      @@artists#.uniq
+    end
+
   def self.genres
     @@genres.uniq
   end
@@ -33,10 +37,6 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
       end
     end
     genre_histo
-  end
-################
-  def self.artists
-    @@artists.uniq
   end
 
   def self.artist_count
