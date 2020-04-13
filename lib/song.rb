@@ -14,29 +14,38 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
     # @@genres << genre
     # @@artists << artist
   end
-
+# We need our Song class to be able to keep track of the number of songs that it creates.
+# A class method that returns that number of songs created
   def self.count
     @@count
   end
 
+# We need our Song class to be able to show us all of the artists of existing songs.
+# A class method that returns a unique array of artists of existing songs
     def self.artists
       @@artists.uniq
     end
 
+# We need our Song class to be able to show us all of the genres of existing songs:
+# A class method that returns a unique array of genres of existing songs
   def self.genres
     @@genres.uniq
   end
 
+
+#We also need our Song class to be able to keep track of the number of songs of each genre it creates.
+# A class method that returns a hash of genres and the number of songs that have those genres
+# should return this : {"rap" => 5, "rock" => 1, "country" => 3}
   def self.genre_count
-    genre_histo = {}
+    genre_hash = {}
     @@genres.each do |gnr|
-      if genre_histo[gnr]
-        genre_histo[gnr] += 1
+      if genre_hash[gnr]
+        genre_hash[gnr] += 1
       else
-        genre_histo[gnr] = 1
+        genre_hash[gnr] = 1
       end
     end
-    genre_histo
+    genre_hash
   end
 
   def self.artist_count
