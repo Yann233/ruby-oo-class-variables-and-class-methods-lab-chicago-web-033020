@@ -33,7 +33,7 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
   end
 
 
-#We also need our Song class to be able to keep track of the number of songs of each genre it creates.
+# We also need our Song class to be able to keep track of the number of songs of each genre it creates.
 # A class method that returns a hash of genres and the number of songs that have those genres
 # should return this : {"rap" => 5, "rock" => 1, "country" => 3}
   def self.genre_count
