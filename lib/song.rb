@@ -9,10 +9,10 @@ attr_accessor :name, :artist, :genre, :count, :genres, :artists
     @artist = artist
     @genre = genre
     @@count += 1  #@@ =>class variables
-    # @@genres << self.genre
-    # @@artists << self.artist
-    @@genres << genre
-    @@artists << artist
+    @@genres << self.genre
+    @@artists << self.artist
+    # @@genres << genre
+    # @@artists << artist
   end
 
   def self.count
